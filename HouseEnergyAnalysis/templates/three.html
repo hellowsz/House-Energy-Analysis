@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>房屋能耗分析</title>
+    <link rel="stylesheet" href="../static/css/02.css">
+</head>
+
+<body>
+<div class="daohang">
+        <ul>
+            <li >
+                <a href="{{ url_for('manage') }}">
+                    <img style="width: 50px;height: 50px;" src="../static/image/房屋2.png" alt="one">
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('two') }}">
+                    01
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('three') }}">
+                    3D图展示
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div >
+            <iframe src="{{ url_for('get3d') }}" frameborder="0" style="width: 700px;height: 600px"></iframe>
+        </div>
+
+    </div>
+</body>
+
+</html>

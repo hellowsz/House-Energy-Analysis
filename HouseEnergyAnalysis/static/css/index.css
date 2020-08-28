@@ -1,0 +1,134 @@
+body {
+    /*min-height: 100vh;*/
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background: url("../image/背景图.jpg") no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.Logo{
+    width: 180px;
+    height: 180px;
+    /*background-color: #1B3280;*/
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-top: 10px solid #74b9ff;
+    margin: 110px auto 40px auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    animation:  al 2s linear infinite;
+}
+.Logo>img{
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    animation: a2 2s linear infinite;
+}
+@keyframes al {
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes a2 {
+    to{
+        transform: rotate(-360deg);
+    }
+}
+.Logo::before,
+.Logo::after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.Logo::before{
+    border-top: 10px solid #81ecec;
+    transform: rotate(120deg);
+}
+.Logo::after{
+    border-top: 10px solid #55efc4;
+    transform: rotate(240deg);
+}
+
+.title>h2{
+     font-family: 华文行楷;
+     font-size: 40px;
+     text-align: center;
+     margin-top: 50px;
+     color: #1B3280;
+}
+.title>h4{
+    font-size: 18px;
+    text-align: center;
+    color: #1B3280;
+}
+.title>h4::before,
+.title>h4::after{
+    content: '';
+    display: inline-block;
+    background-color: #1B3280;
+    width: 120px;
+    height: 2px;
+}
+.title>h4::before{
+    margin: 0 5px 5px 0;
+}
+.title>h4::after{
+    margin: 0 0 5px 5px;
+}
+
+.let_go{
+    margin: 50px auto 0 auto;
+    background: #2f3640;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.let_go>a{
+    height: 50px;
+    width: 50px;
+    background-image: url("../image/房屋 (1).png") ;
+    background-size: 100px 50px;
+    background-position: -203px -1px;
+    z-index:99;
+}
+.let_go::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: -50%;
+    transform: rotate(-45deg);
+    background-color: white;
+    width: 15px;
+    height: 120px;
+}
+.let_go:hover::after{
+    animation: sliding 0.4s 1;
+}
+.let_go:hover>a{
+    background-position: 50px -1px;
+}
+@keyframes sliding {
+    25%{
+      left: 0;
+    }
+    50%{
+        left: 50%;
+    }
+    100%{
+        left: 150%;
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/js/echarts-wordcloud.js"></script>
+    <title>房屋能耗分析</title>
+    <link rel="stylesheet" href="../static/css/01.css">
+    <!--<style>
+        .main{
+            display: flex;
+            flex-direction:row;
+            justify-content: space-between;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .main_first,.main_last{
+            display: flex;
+            flex-direction: column;
+            width: 38%;
+        }
+        #main5{
+            width: 24%;
+            height:320px;
+            margin-top: 10%;
+        }
+        #main1,#main2,#main3,#main4{
+
+            height:320px;
+        }
+    </style>
+    -->
+</head>
+
+<body>
+    <div class="daohang">
+        <ul>
+            <li >
+                <a href="{{ url_for('manage') }}">
+                    <img style="width: 50px;height: 50px;" src="../static/image/房屋2.png" alt="one">
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('two') }}">
+                    01
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('three') }}">
+                    3D图展示
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--<div class="box1">
+
+        <img src="pic1.jpg" alt="">
+        <img src="pic2.jpg" alt="">
+        -->
+    <!--
+        <div id="main1"></div>
+        <div id="main2"></div>
+    </div>
+    <div class="box2">
+    -->
+        <!--
+        <img src="pic1.jpg" alt="">
+        <img src="pic2.jpg" alt="">
+        <img src="pic1.jpg" alt="">
+        -->
+    <!--
+        <div id="main5"></div>
+        <div id="main4"></div>
+        <div id="main3"></div>
+    </div>-->
+  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+     <div class="box1">
+        <div class="box11" id="main1"></div>
+        <div class="box12" id="main2"></div>
+    </div>
+    <div class="box2">
+        <div class="box21" id="main3"></div>
+        <div class="box22" id="main4"></div>
+        <div class="box23" id="main5"></div>
+    </div>
+<script type="text/javascript">
+    var myChart_scatter = echarts.init(document.getElementById('main1'));
+    // 指定图表的配置项和数据
+    var option_scatter = {{ bar_scatter | safe}};
+    // 使用刚指定的配置项和数据显示图表。
+    myChart_scatter.setOption(option_scatter);
+
+    var myChart_bar = echarts.init(document.getElementById('main2'));
+    // 指定图表的配置项和数据
+    var option_bar = {{ bar_bar | safe}};
+    // 使用刚指定的配置项和数据显示图表。
+    myChart_bar.setOption(option_bar);
+
+    var myChart_line = echarts.init(document.getElementById('main3'));
+    // 指定图表的配置项和数据
+    var option_line = {{ bar_line | safe}};
+    // 使用刚指定的配置项和数据显示图表。
+    myChart_line.setOption(option_line);
+
+    var myChart_word = echarts.init(document.getElementById('main4'));
+    // 指定图表的配置项和数据
+    var option_word = {{ bar_word | safe}};
+    // 使用刚指定的配置项和数据显示图表。
+    myChart_word.setOption(option_word);
+
+    var myChart_pie = echarts.init(document.getElementById('main5'));
+    // 指定图表的配置项和数据
+    var option_pie = {{ bar_pie | safe}};
+    // 使用刚指定的配置项和数据显示图表。
+    myChart_pie.setOption(option_pie);
+</script>
+
+</body>
+
+</html>

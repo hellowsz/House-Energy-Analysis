@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.daohang {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    border-bottom: 1px solid #ccc;
+}
+
+.daohang ul {
+    position: absolute;
+    top: 0;
+    left: 55px;
+    padding-left: 10px;
+}
+
+.daohang li {
+    float: left;
+    padding-left: 30px;
+}
+
+.daohang ul li a {
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    height: 500px;
+    margin-top: 140px;
+    justify-content: center;
+}
+
+.box1 {
+    display: flex;
+    width: 50%;
+    background-color: #fff;
+}
+.box2 {
+    display: flex;
+    width: 50%;
+    background-color: #fff;
+}
+.box3 {
+    display: flex;
+    width: 33.33%;
+    background-color: #fff;
+}
